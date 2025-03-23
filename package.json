@@ -2,16 +2,17 @@
   "name": "twitterapp",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npx nodmon index.js"
+    "start": "npx nodemon src/index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "ejs": "^3.1.10",
     "express": "^4.21.2",
     "morgan": "^1.10.0",
     "nodemon": "^3.1.9"

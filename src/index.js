@@ -1,8 +1,21 @@
 import express from 'express';
 import morgan from 'morgan';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
 // Create a new express app/server object
 const App = express();
+
+const __filename = fileURLToPath(import.meta.url); // get the resolved path to the file
+const __dirname = path.dirname(__filename); // get the name of the directory
+console.log(__dirname);
+
+App.set('view engine', 'ejs')
+App.set('views', __dirname + '/views')
+App.get('/',(req , res)=>{
+    res.render('home',{name : "Rishabh"})  // Now we are using ejs to show up JS into HTML markup formate
+})
+
 
 //! Middleware function which will be executed before every requests
 function mid1(res , req, next){
@@ -22,7 +35,6 @@ function CommonMiddleWare(req, res, next){
 }
 
 App.use(morgan('combined')); // This will be executed before anyother Middlerware
-
 App.use(express.json());
 App.use(express.text());  // ^This middleware will make, Express to automaticaly identify that body is text or json and do it accordingly 
 

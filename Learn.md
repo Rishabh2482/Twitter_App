@@ -37,3 +37,6 @@
 11. what is `app.all()` in Express.js?
     - `app.all()` is used to handle all types of requests for a specific route or all route. It is similar to `app.use()` but it is specific to a route or all route if `*` is used. For example, `app.all('/users', (req, res) => { ... })` will handle all types of requests for the `/users` route.
     - we can also use it to handle all types of requests for all routes by using `app.all('*', (req, res) => { ... })`. That does not mathces to any other routes will be handled by this route's callback.
+
+12. Previosly View Layer was handled at backend but now it is handled at frontend, why?
+    - Previously, the view layer was handled at the backend because the backend was responsible for generating the HTML content and sending it to the client. However, with the advent of front-end frameworks like React, Angular, and Vue.js, the view layer is now handled at the frontend. This allows for a more interactive and responsive user experience, as the frontend can update the view without having to reload the entire page.Additionally, it allows for a more modular and reusable codebase, as the frontend can be developed independently of the backend.

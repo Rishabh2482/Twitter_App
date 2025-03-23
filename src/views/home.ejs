@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Hello WOrld <%= name %>    
+    <!--^ Here name is js expression which is converted into HTML, and all this computation done at express server. -->
+    <!-- ^This is similer to making it server-side rendring by showing HTML file from server after computaion, That is View layer at Backend. -->
+    <%  if(10 >3) { %>
+        <h1>10 is Grater than 3</h1>
+    <% } %>
+</body>
+</html>
