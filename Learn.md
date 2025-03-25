@@ -40,3 +40,8 @@
 
 12. Previosly View Layer was handled at backend but now it is handled at frontend, why?
     - Previously, the view layer was handled at the backend because the backend was responsible for generating the HTML content and sending it to the client. However, with the advent of front-end frameworks like React, Angular, and Vue.js, the view layer is now handled at the frontend. This allows for a more interactive and responsive user experience, as the frontend can update the view without having to reload the entire page.Additionally, it allows for a more modular and reusable codebase, as the frontend can be developed independently of the backend.
+
+13. The order of parameter (res,req) passed in callback which is passed in  API route in Express.js will be like this?
+    - The order of parameters passed in the callback function for an API route in Express.js is `(req, res)`. This is because the request object (`req`) is passed first, followed by the response object (`res`).
+    - For example, `app.get('/users', (req, res) => { ... })` will handle GET requests for the `/users` route, and the `req` object will contain information about the incoming request, while the `res` object will be used to send the response.
+    - The order of parameters is important, as Express.js uses this convention to determine which object is which.
