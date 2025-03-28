@@ -19,6 +19,7 @@ App.get('/',(req , res)=>{
 App.use(morgan('combined')); // This will be executed before anyother Middlerware
 App.use(express.json());
 App.use(express.text());  // ^This middleware will make, Express to automaticaly identify that body is text or json and do it accordingly 
+App.use(express.urlencoded({ extended: true }));
 
 // App.use('/tweets', tweetRouter)
 App.use('/api',apiRouter)

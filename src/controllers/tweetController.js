@@ -12,8 +12,11 @@ export const getTweetsById = (req,res) =>{
 
 export const createTweet = (req, res) =>{
     return res.json({
-        id: req.params.id,
-        message: `Created a tweet with id  ${req.params.id}`
+        message: `Created a new tweet `,
+    
+        data: {
+            textdata: req.body.tweet
+        }
     })
 }
 // This is controler file and it will only manage the controller layer part.
