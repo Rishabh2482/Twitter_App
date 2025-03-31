@@ -15,7 +15,7 @@ export const createTweet = (req, res) =>{
         message: `Created a new tweet `,
     
         data: {
-            textdata: req.body.tweet
+            textdata: req.body.body
         }
     })
 }

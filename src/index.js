@@ -5,6 +5,7 @@ import { fileURLToPath } from 'url';
 import { PORT } from './config/serverConfig.js';
 // import tweetRouter from './routes/tweet.js'
 import apiRouter from './routes/apiRoutes.js'
+import connectDB from './config/dbConfig.js';
 
 // Create a new express app/server object
 const App = express();
@@ -39,4 +40,5 @@ App.all('*',(req, res)=>{
 //! define a PORT and attach it to expresss App at port 3000
 App.listen(PORT,()=>{
     console.log(`Server is running on port ${PORT}`);
+    connectDB();
 })

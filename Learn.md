@@ -45,3 +45,50 @@
     - The order of parameters passed in the callback function for an API route in Express.js is `(req, res)`. This is because the request object (`req`) is passed first, followed by the response object (`res`).
     - For example, `app.get('/users', (req, res) => { ... })` will handle GET requests for the `/users` route, and the `req` object will contain information about the incoming request, while the `res` object will be used to send the response.
     - The order of parameters is important, as Express.js uses this convention to determine which object is which.
+
+14. What is ORM or ODM ?
+    - ORM (Object-Relational Mapping) is a programming technique used to convert data between incompatible type systems in object-oriented programming languages. It allows developers to interact with a database using object-oriented programming concepts, rather than writing raw SQL queries.
+    - ODM (Object-Document Mapping) is similar to ORM, but it is used for NoSQL databases, such as MongoDB. ODM allows developers to interact with a NoSQL database using object-oriented programming concepts, rather than writing raw queries.
+    - In Node.js, popular ORM libraries include Sequelize and TypeORM, while popular ODM libraries include Mongoose and Waterline.
+
+15.
+```js
+Server is running on port 3000
+Failed to connect to MongoDB:  Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://www.mongodb.com/docs/atlas/security-whitelist/
+MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://www.mongodb.com/docs/atlas/security-whitelist/
+    at _handleConnectionErrors (C:\Users\Rishabh Chauhan\Desktop\pw-content\Node-07-part-2\05.Express\01_TwitterApp_03\node_modules\mongoose\lib\connection.js:1165:11)
+    at NativeConnection.openUri (C:\Users\Rishabh Chauhan\Desktop\pw-content\Node-07-part-2\05.Express\01_TwitterApp_03\node_modules\mongoose\lib\connection.js:1096:11)
+    at async connectDB (file:///C:/Users/Rishabh%20Chauhan/Desktop/pw-content/Node-07-part-2/05.Express/01_TwitterApp_03/src/config/dbConfig.js:7:9) {
+  errorLabelSet: Set(0) {},
+  reason: TopologyDescription {
+    type: 'ReplicaSetNoPrimary',
+    servers: Map(3) {
+      'ac-gdizp7s-shard-00-00.btm8h2w.mongodb.net:27017' => [ServerDescription],
+      'ac-gdizp7s-shard-00-01.btm8h2w.mongodb.net:27017' => [ServerDescription],
+      'ac-gdizp7s-shard-00-02.btm8h2w.mongodb.net:27017' => [ServerDescription]
+    },
+    stale: false,
+    compatible: true,
+    heartbeatFrequencyMS: 10000,
+    localThresholdMS: 15,
+    setName: 'atlas-xsaqoo-shard-0',
+    maxElectionId: null,
+    maxSetVersion: null,
+    commonWireVersion: 0,
+    logicalSessionTimeoutMinutes: null
+  },
+  code: undefined
+}
+```
+- This error occurs when the MongoDB server is not reachable or the connection string is incorrect. It can also occur if the IP address of the client is not whitelisted in the MongoDB Atlas cluster. To fix this, make sure that the connection string is correct and that the IP address of the client is whitelisted in the MongoDB Atlas cluster.
+- This error is occured in my project so i will fix it after learning the basics of MongoDB and Mongoose, and creating a new cluster in MongoDB Atlas.
+- I will also check the connection string and make sure that the IP address of the client is whitelisted in the MongoDB Atlas cluster.
+
+
+# Password: vevH5EAtvazbAQyj
+# userName:- rishabh2001c
+
+
+0-- new 2:43
+## pass:- test123 , username:- n1
+- mongodb+srv://n1:test123@cluster0.wbymtfh.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
