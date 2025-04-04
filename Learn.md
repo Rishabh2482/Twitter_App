@@ -85,10 +85,3 @@ MongooseServerSelectionError: Could not connect to any servers in your MongoDB A
 - I will also check the connection string and make sure that the IP address of the client is whitelisted in the MongoDB Atlas cluster.
 
 
-# Password: vevH5EAtvazbAQyj
-# userName:- rishabh2001c
-
-
-0-- new 2:43
-## pass:- test123 , username:- n1
-- mongodb+srv://n1:test123@cluster0.wbymtfh.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
